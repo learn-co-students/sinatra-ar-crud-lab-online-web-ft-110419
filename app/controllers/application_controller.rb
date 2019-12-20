@@ -17,11 +17,11 @@ class ApplicationController < Sinatra::Base
   end
   
   post '/articles' do 
-    binding.pry
-    redirect "/articles/#{}"
+    redirect "/articles/#{Article.create(params).id}"
   end
   
   get '/articles/:id' do 
+    @article = Article.find_by(id: params[:id])
     erb :show
   end 
   
