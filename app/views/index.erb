@@ -1,0 +1,10 @@
+<h1>Articles</h1>
+<%if !@articles.all.empty?%>
+  <ol>
+    <%@articles.each do |article|%>
+      <li><strong><%=article.title%></strong></li>
+    <%end%>
+  </ol>
+<%else %>
+    <em>Please Create An Article <a href="/articles/new">add article</a> </em>
+<%end %>
