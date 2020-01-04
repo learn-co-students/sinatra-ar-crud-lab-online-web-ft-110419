@@ -1,3 +1,9 @@
-<% @articles.each do |article| %>
-<h2><%=article%></h2>
-<% end %>
+
+<p><%= @article.title %></p>
+<p><%= @article.content%></p>
+
+ <form method="POST" action="/articles/<%= @article.id %>/delete">
+      <input id="hidden" type="hidden" name="_method" value="delete">
+      <input type="submit" value="delete">
+  </form>
+
