@@ -1,0 +1,15 @@
+<html>
+	<body>
+		<h1>Articles:</h1>
+		<ol>
+			<% if @articles.length > 0%>
+			<% @articles.each do |article|%>
+				<li><p><%= article.title %></p>
+					<p><%= article.content %></p>
+				</li>
+			<% end %>
+			<% end %>
+		</ol>
+	</body>
+</html>
+

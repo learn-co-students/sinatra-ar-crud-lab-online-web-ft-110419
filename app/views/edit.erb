@@ -1,0 +1,13 @@
+<html>
+	<body>
+		<form method = "POST" action = '/articles/<%= @article.id%>'>
+			<h2>Article Title: <%= @article.title %></h2>
+			<h2>Article Content:</h2>
+			<p><%= @article.content %></p>
+			<input id="hidden" type="hidden" name = "_method" value="PATCH">
+			<p>Update Title: <input type="text" name = "title"></p>
+			<p>Update Content: <input type="text" name="content"></p>
+			<input type="submit" id="submit">
+		</form>
+	</body>
+</html>
