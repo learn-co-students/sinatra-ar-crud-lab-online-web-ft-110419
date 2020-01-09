@@ -8,6 +8,20 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
-  get '/' do
+  get '/articles' do
+    @articles = Article.all
+
+    erb :'views/index'
+  end
+
+  post '/articles' do
+    @article = Article.create(params[:article])
+
+    erb :'views/index'
+  end
+
+  get 'articles/new' do
+
+    erb :'views/new'
   end
 end
