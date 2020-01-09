@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Magazine App</title>
-  </head>
-  <body>
-
-    <% @articles.all.each do |article| %>
-        <div>
-            <p><%= article.name%> </p>
-            <p><%= article.content %></p>
-        </div>
-    <% end %>
-
-  </body>
-</html>
+<% @articles.each do |article| %>
+    <a href="/articles/<%= article.id %>">
+      <%= article.title %> </a>
+<% end %>
