@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background: #074e55;
+}
+
+main {
+  width: 60%;
+  border: 6px double white;
+  padding: 10px;
+}
+
+div {
+  border-bottom: 2px solid gray;
+  margin: 10px 0;
+}
+
+div h2 {
+  text-transform: capitalize;
+}
+
+a {
+  color: white;
+}
+
+div h2 a {
+  text-decoration: none;
+}
+
+div h2 a:hover {
+  text-decoration: underline;
+}
