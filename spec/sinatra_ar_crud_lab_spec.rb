@@ -14,11 +14,12 @@ describe "Magazine App" do
     it "creates a new article" do
       visit '/articles/new'
 
+      
       fill_in :title, :with => "my favorite article"
       fill_in :content, :with => "content!!!!"
 
       page.find(:css, "[type=submit]").click
-
+      
       expect(Article.all.count).to eq(3)
       expect(Article.last.title).to eq("my favorite article")
     end
